@@ -1,10 +1,10 @@
-# $Revision: 1.7 $Date: 2004-08-19 01:15:54 $
+# $Revision: 1.8 $Date: 2004-08-19 01:21:50 $
 %define 	modulename pam_sqlite
 Summary:	SQLite PAM Module
 Summary(pl):	Modu³ PAM SQLite
 Name:		pam-%{modulename}
 Version:	0.3
-Release:	1
+Release:	2
 Epoch:		0
 License:	GPL
 Group:		Base
