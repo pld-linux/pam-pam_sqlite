@@ -1,9 +1,10 @@
-# $Revision: 1.2 $Date: 2003-11-25 14:08:28 $
+# $Revision: 1.3 $Date: 2003-11-25 14:41:20 $
 Summary:	SQLite PAM Module
 Summary(pl):	Modu³ PAM SQLite
 Name:		pam-pam_sqlite
 Version:	0.3
 Release:	1
+Epoch:		0
 License:	GPL
 Group:		Base
 Source0:	http://www.edin.dk/pam_sqlite/distributions/pam_sqlite-%{version}.tar.gz
