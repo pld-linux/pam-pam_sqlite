@@ -1,4 +1,4 @@
-# $Revision: 1.4 $Date: 2003-11-25 15:37:06 $
+# $Revision: 1.5 $Date: 2003-11-28 09:30:40 $
 %define 	modulename pam_sqlite
 Summary:	SQLite PAM Module
 Summary(pl):	Modu³ PAM SQLite
@@ -8,17 +8,17 @@ Release:	1
 Epoch:		0
 License:	GPL
 Group:		Base
-Source0:	http://www.edin.dk/%{modulename}/distributions/%{modulename}-%{version}.tar.gz
+Source0:	http://www.edin.dk/pam_sqlite/distributions/%{modulename}-%{version}.tar.gz
 # Source0-md5:	61ad442fe619bb1dbb00fd5ba28e54bd
 Source1:	%{name}.conf
 Patch0:		%{name}-pld.patch
 URL:		http://www.edin.dk/pam_sqlite/
 BuildRequires:	pam-devel
 BuildRequires:	sqlite-devel
-Obsoletes:	%{modulename}
+Obsoletes:	pam_sqlite
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define _libdir /lib/security
+%define		_libdir		/lib/security
 
 %description
 PAM SQLite is a PAM module that uses SQLite database.
@@ -38,7 +38,6 @@ PAM SQLite jest modu³em PAM u¿ywaj±cym bazy SQLite.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_sysconfdir}}
 
 %{__make} install \
