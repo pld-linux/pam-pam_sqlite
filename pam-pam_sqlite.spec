@@ -1,4 +1,4 @@
-# $Revision: 1.5 $Date: 2003-11-28 09:30:40 $
+# $Revision: 1.6 $Date: 2004-07-29 20:47:35 $
 %define 	modulename pam_sqlite
 Summary:	SQLite PAM Module
 Summary(pl):	Modu³ PAM SQLite
@@ -18,7 +18,7 @@ BuildRequires:	sqlite-devel
 Obsoletes:	pam_sqlite
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_libdir		/lib/security
+%define		_libdir		/%{_lib}/security
 
 %description
 PAM SQLite is a PAM module that uses SQLite database.
