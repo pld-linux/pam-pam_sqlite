@@ -1,0 +1,9 @@
+diff -uNr pam_sqlite-0.3-org/install-module pam_sqlite-0.3/install-module
+--- pam_sqlite-0.3-org/install-module	Mon Jun 23 00:23:03 2003
++++ pam_sqlite-0.3/install-module	Sun Oct 26 09:50:10 2003
+@@ -16,4 +16,4 @@
+     ;;
+ esac
+ 
+-install -c -m 644 -o root pam_sqlite.so $ROOTDIR/$destdir
++install -c -m 644 pam_sqlite.so $ROOTDIR/$destdir
