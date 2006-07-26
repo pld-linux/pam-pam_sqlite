@@ -1,4 +1,4 @@
-# $Revision: 1.9 $Date: 2005-04-01 19:31:36 $
+# $Revision: 1.10 $Date: 2006-07-26 15:48:06 $
 %define 	modulename pam_sqlite
 Summary:	SQLite PAM Module
 Summary(pl):	Modu³ PAM SQLite
@@ -40,7 +40,7 @@ PAM SQLite jest modu³em PAM u¿ywaj±cym bazy SQLite.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_sysconfdir}}
 
-install -c pam_sqlite.so $RPM_BUILD_ROOT/%{_libdir}
+install -c pam_sqlite.so $RPM_BUILD_ROOT%{_libdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
