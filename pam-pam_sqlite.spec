@@ -1,7 +1,7 @@
-# $Revision: 1.10 $Date: 2006-07-26 15:48:06 $
+# $Revision: 1.11 $Date: 2007-02-12 00:49:18 $
 %define 	modulename pam_sqlite
 Summary:	SQLite PAM Module
-Summary(pl):	Modu≥ PAM SQLite
+Summary(pl.UTF-8):   Modu≈Ç PAM SQLite
 Name:		pam-%{modulename}
 Version:	0.3
 Release:	2
@@ -23,8 +23,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 PAM SQLite is a PAM module that uses SQLite database.
 
-%description -l pl
-PAM SQLite jest modu≥em PAM uøywaj±cym bazy SQLite.
+%description -l pl.UTF-8
+PAM SQLite jest modu≈Çem PAM u≈ºywajƒÖcym bazy SQLite.
 
 %prep
 %setup -q -n %{modulename}-%{version}
