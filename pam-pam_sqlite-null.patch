@@ -1,0 +1,10 @@
+--- pam_sqlite-0.3/pam_get_service.c~	2003-06-20 11:56:31.000000000 +0200
++++ pam_sqlite-0.3/pam_get_service.c	2008-02-01 02:41:30.459073286 +0100
+@@ -4,6 +4,7 @@
+ 
+ /* $Id$ */
+ #include <security/pam_modules.h>
++#include <stdio.h>
+ 
+ const char *pam_get_service(pam_handle_t *pamh)
+ {
