@@ -1,4 +1,4 @@
-# $Revision: 1.14 $Date: 2008-02-01 10:43:12 $
+# $Revision: 1.15 $Date: 2008-02-01 17:28:21 $
 %define 	modulename pam_sqlite
 Summary:	SQLite PAM Module
 Summary(pl.UTF-8):	Moduł PAM SQLite
@@ -13,6 +13,7 @@ Source0:	http://www.edin.dk/pam_sqlite/distributions/%{modulename}-%{version}.ta
 Source1:	%{name}.conf
 Patch0:		%{name}-pld.patch
 URL:		http://www.edin.dk/pam_sqlite/
+BuildRequires:	automake
 BuildRequires:	pam-devel
 BuildRequires:	sqlite-devel
 Obsoletes:	pam_sqlite
@@ -31,11 +32,15 @@ PAM SQLite jest modułem PAM używającym bazy SQLite.
 %patch0 -p1
 
 %build
+cp -f /usr/share/automake/config.* .
 %configure2_13 \
 	%{!?debug:--disable-debug}
 
+# INCLUDE is a hack for buggy sources
+# LINK is a hack to avoid incorrect -L/usr/lib
 %{__make} \
-	CFLAGS="-include stdio.h -fPIC"
+	INCLUDE="-include stdio.h" \
+	LINK=
 
 %install
 rm -rf $RPM_BUILD_ROOT
