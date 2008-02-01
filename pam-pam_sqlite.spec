@@ -1,4 +1,4 @@
-# $Revision: 1.13 $Date: 2008-02-01 01:47:52 $
+# $Revision: 1.14 $Date: 2008-02-01 10:43:12 $
 %define 	modulename pam_sqlite
 Summary:	SQLite PAM Module
 Summary(pl.UTF-8):	Moduł PAM SQLite
@@ -12,7 +12,6 @@ Source0:	http://www.edin.dk/pam_sqlite/distributions/%{modulename}-%{version}.ta
 # Source0-md5:	61ad442fe619bb1dbb00fd5ba28e54bd
 Source1:	%{name}.conf
 Patch0:		%{name}-pld.patch
-Patch1:		%{name}-null.patch
 URL:		http://www.edin.dk/pam_sqlite/
 BuildRequires:	pam-devel
 BuildRequires:	sqlite-devel
@@ -30,13 +29,13 @@ PAM SQLite jest modułem PAM używającym bazy SQLite.
 %prep
 %setup -q -n %{modulename}-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 %configure2_13 \
 	%{!?debug:--disable-debug}
 
-%{__make}
+%{__make} \
+	CFLAGS="-include stdio.h -fPIC"
 
 %install
 rm -rf $RPM_BUILD_ROOT
