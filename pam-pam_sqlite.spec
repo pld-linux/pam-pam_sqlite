@@ -1,4 +1,3 @@
-# $Revision: 1.15 $Date: 2008-02-01 17:28:21 $
 %define 	modulename pam_sqlite
 Summary:	SQLite PAM Module
 Summary(pl.UTF-8):	Moduł PAM SQLite
